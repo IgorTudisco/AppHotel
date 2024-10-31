@@ -57,9 +57,34 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Fonts\AlegreyaSC-Black.ttf" />
+	  <None Remove="Resources\Fonts\AlegreyaSC-BlackItalic.ttf" />
+	  <None Remove="Resources\Fonts\AlegreyaSC-Bold.ttf" />
+	  <None Remove="Resources\Fonts\AlegreyaSC-BoldItalic.ttf" />
+	  <None Remove="Resources\Fonts\AlegreyaSC-ExtraBold.ttf" />
+	  <None Remove="Resources\Fonts\AlegreyaSC-ExtraBoldItalic.ttf" />
+	  <None Remove="Resources\Fonts\AlegreyaSC-Italic.ttf" />
+	  <None Remove="Resources\Fonts\AlegreyaSC-Medium.ttf" />
+	  <None Remove="Resources\Fonts\AlegreyaSC-MediumItalic.ttf" />
+	  <None Remove="Resources\Fonts\AlegreyaSC-Regular.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\ContratacaoHospedagem.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\HospegademContratada.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Sobre.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>
