@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppHotel.Views.Sobre"
+             Title="ContratacaoHospedagem"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#f0e8ff">
+
+    <VerticalStackLayout VerticalOptions="Center"
+                         Padding="20">
+
+        <Label 
+            Text="Sobre"
+            FontFamily="AlegreyaSC"
+            FontSize="45"
+            VerticalTextAlignment="Center"
+            HorizontalOptions="CenterAndExpand"
+            TextColor="#5B2D8A"/>
+
+        <Frame Padding="15" CornerRadius="10" BackgroundColor="{StaticResource Black}" HasShadow="True" Margin="10,20,10,20">
+            <VerticalStackLayout Spacing="15">
+
+
+                <Grid RowDefinitions="Auto, Auto"
+                      ColumnDefinitions="*, 2*"
+                      Margin="5">
+
+                    <Label Grid.Row="0" Grid.Column="0"
+                           Text="Desenvolvedor:"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           TextColor="#5B2D8A" 
+                        HorizontalOptions="Start"/>
+
+                    <Label Grid.Row="0" Grid.Column="1"
+                           Text="Igor"
+                           FontSize="16"
+                           TextColor="#753e96" 
+                            HorizontalOptions="End"/>
+
+                    <Label Grid.Row="1" Grid.Column="0"
+                           Text="Nome do projeto:"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           TextColor="#5B2D8A"
+                           HorizontalOptions="Start"/>
+
+                    <Label Grid.Row="1" Grid.Column="1"
+                           Text="Hotel Zona Sul"
+                           FontSize="16"
+                           TextColor="#753e96"
+                           HorizontalOptions="End"/>
+                </Grid>
+
+                <Grid RowDefinitions="Auto, Auto"
+                      ColumnDefinitions="*, 2*"
+                      Margin="5">
+
+                    <Label Grid.Row="0" Grid.Column="0"
+                           Text="Ano de desenvolvimento:"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           TextColor="#5B2D8A"
+                           HorizontalOptions="Start"/>
+
+                    <Label Grid.Row="0" Grid.Column="1"
+                           Text="31/10/2024"
+                           FontSize="16"
+                           TextColor="#753e96"
+                           HorizontalOptions="End"/>
+                </Grid>
+
+                <Grid RowDefinitions="Auto, Auto"
+                      ColumnDefinitions="*, 2*"
+                      Margin="5">
+
+                    <Label Grid.Row="0" Grid.Column="0"
+                           Text="Descrição:"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           TextColor="#5B2D8A"
+                           VerticalOptions="Start"
+                           HorizontalOptions="Start"/>
+
+                    <Label Grid.Row="0" Grid.Column="1"
+                           Text="Esse projeto foi feito na Escola Técnica Estadual Martin Luther King usando a plataforma MAUI."
+                           FontSize="14"
+                           FontFamily="AlegreyaSCBoldItalic"
+                           TextColor="#753e96"
+                           VerticalOptions="Start"
+                           HorizontalTextAlignment="Start"
+                           Margin="5,0,0,0"/>
+                </Grid>
+            </VerticalStackLayout>
+        </Frame>
+
+        <Button Text="Voltar"
+                HorizontalOptions="Center"
+                BackgroundColor="#753e96"
+                TextColor="White"
+                CornerRadius="20"
+                Padding="10"
+                FontSize="18"
+                WidthRequest="150"
+                Clicked="Button_ClickedVoltar"/>
+    </VerticalStackLayout>
+
+</ContentPage>

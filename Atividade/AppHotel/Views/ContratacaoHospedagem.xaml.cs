@@ -9,9 +9,6 @@ public partial class ContratacaoHospedagem : ContentPage
 
     private void Button_ClickedSobre(object sender, EventArgs e)
     {
-
         App.Current.MainPage = new Sobre();
-
-
     }
 }
