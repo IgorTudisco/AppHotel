@@ -104,7 +104,8 @@
 
                 <Button Text="Avançar"
                         TextColor="#009000"
-                        BackgroundColor="{StaticResource Tertiary}"/>
+                        BackgroundColor="{StaticResource Tertiary}"
+                        Clicked="Button_Clicked"/>
 
             </VerticalStackLayout>
         </Frame>

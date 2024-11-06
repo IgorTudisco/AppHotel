@@ -6,4 +6,19 @@ public partial class HospegademContratada : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+
+		try
+		{
+
+            App.Current.MainPage = new ContratacaoHospedagem();
+
+        } catch (Exception ex)
+		{
+			DisplayAlert("Erro", ex.Message, "Ok");
+		}
+
+    }
 }
