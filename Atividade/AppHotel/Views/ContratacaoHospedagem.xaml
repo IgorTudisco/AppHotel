@@ -64,7 +64,8 @@
                         FontFamily="AlegreyaSCBoldItalic"
                         FontSize="Medium"
                         TextColor="{StaticResource Tertiary}"
-                        BackgroundColor="{StaticResource Tertiary}"/>
+                        BackgroundColor="{StaticResource Tertiary}"
+                        ItemDisplayBinding="{Binding Descricao}"/>
 
                 <Frame Padding="10"
                        Margin="10"
@@ -82,6 +83,7 @@
                             
                             <DatePicker x:Name="dtpck_checkin"
                                         Format="dd/MM/yyyy"
+                                        DateSelected="dtpck_checkin_DateSelected"
                                         TextColor="{StaticResource Tertiary}"/>
                             
                         </HorizontalStackLayout>
