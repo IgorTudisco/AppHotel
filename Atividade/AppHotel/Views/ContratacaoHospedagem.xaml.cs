@@ -1,3 +1,5 @@
+using AppHotel.Models;
+
 namespace AppHotel.Views;
 
 public partial class ContratacaoHospedagem : ContentPage
@@ -22,18 +24,32 @@ public partial class ContratacaoHospedagem : ContentPage
 
 	}
 
-    private void Button_Clicked(object sender, EventArgs e)
+    private async void Button_Clicked(object sender, EventArgs e)
     {
         try
         {
+            Hospedagem hospedagem = new Hospedagem
+            {
 
-            App.Current.MainPage = new HospegademContratada();
+                QuartoSelecionado = (Quarto) pck_quarto.SelectedItem,
+                QntAdultos = Convert.ToInt32(stp_adultos.Value),
+                QntCriancas = Convert.ToInt32(stp_crianca.Value),
+                DataCheckIn = dtpck_checkin.Date,
+                DataCheckOut = dtpck_checkout.Date
+
+            };
+
+
+            await Navigation.PushAsync(new HospegademContratada()
+            {
+                BindingContext = hospedagem,
+            });
 
         }
         catch (Exception ex)
         {
 
-            DisplayAlert("Deu ruim!", ex.Message, "Ok");
+            await DisplayAlert("Deu ruim!", ex.Message, "Ok");
 
         }
     }
@@ -43,7 +59,7 @@ public partial class ContratacaoHospedagem : ContentPage
         App.Current.MainPage = new Sobre();
     }
 
-    private void dtpck_checkin_DateSelected(object sender, DateChangedEventArgs e)
+    private void Dtpck_checkin_DateSelected(object sender, DateChangedEventArgs e)
     {
         DatePicker elemento = sender as DatePicker;
 
